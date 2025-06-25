@@ -361,6 +361,9 @@ nav #theme-toggle {
   .nav-links #cont {
     margin-bottom: 1rem;
   }
+  .dark-mode nav .nav-links a {
+    background-color: #1a1a1a;
+  }
 
   /* dark nav */
   .dark-mode .nav-links {
