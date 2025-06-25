@@ -19,8 +19,11 @@ header {
   height: 10vh;
   position: sticky;
   top: 0;
+  /* box-shadow: 0 0.2rem 0 #000; */
   border-bottom: 0.2rem solid #000;
   z-index: 10;
+  will-change: transform;
+  transform: translateZ(0); /* forces GPU layer */
 }
 
 header h1 {
@@ -62,6 +65,7 @@ section {
   /* min-height: 80vh; */
   scroll-margin-top: 10vh;
   padding-bottom: 5vh;
+  border-bottom: 0.2rem solid #000;
 }
 /* section #home {
   max-height: 20vh;
@@ -75,7 +79,7 @@ section h1 {
 
 #home {
   background-color: #ddffb7;
-  border-bottom: 0.2rem solid #000;
+  /* border-bottom: 0.2rem solid #000; */
 }
 .dark-mode #home h1 {
   color: #ddffb7;
@@ -92,21 +96,21 @@ section h1 {
 }
 #about {
   background-color: #ffd18d;
-  border-bottom: 0.2rem solid #000;
+  /* border-bottom: 0.2rem solid #000; */
 }
 .dark-mode #about h1 {
   color: #ffd18d;
 }
 #projects {
   background-color: rgb(255, 140, 140);
-  border-bottom: 0.2rem solid #000;
+  /* border-bottom: 0.2rem solid #000; */
 }
 .dark-mode #projects h1 {
   color: rgb(255, 140, 140);
 }
 #contact {
   background-color: rgb(205, 253, 255);
-  border-bottom: 0.2rem solid #000;
+  /* border-bottom: 0.2rem solid #000; */
 }
 .dark-mode #contact h1 {
   color: rgb(205, 253, 255);
@@ -357,6 +361,10 @@ nav #theme-toggle {
     border-bottom-left-radius: 0;
     background-color: bisque;
     /* border-top: 1px solid #000; */
+  }
+
+  .nav-links a:hover {
+    background-color: bisque;
   }
   .nav-links #cont {
     margin-bottom: 1rem;
