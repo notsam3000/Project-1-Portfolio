@@ -1,0 +1,142 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body,
+html {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+  font-size: 1rem;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#calc-container {
+  padding: 1.25rem;
+  border-radius: 0.625rem;
+  background-color: white;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  width: 18.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+input {
+  padding: 0.625rem;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 0.3125rem;
+  text-align: center;
+}
+
+button {
+  padding: 0.4em 1em;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 0.2em;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#clear {
+  background-color: red;
+  padding: 0.4em 0.8em;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+#output {
+  margin-top: 0.625rem;
+  padding: 0.625rem;
+  background-color: #eaeaea;
+  font-size: 1.2rem;
+  border-radius: 0.3125rem;
+  min-height: 2.8rem;
+  display: flex;
+  align-items: center;
+}
+
+/* History */
+
+#history {
+  padding: 1.25rem;
+  border-radius: 0.625rem;
+  background-color: rgba(46, 46, 46, 0.226);
+  box-shadow: 0em 0em 1rem rgba(0, 0, 0, 0.2);
+  width: 18.75rem;
+  /* display: flex;
+  flex-direction: column; */
+  /* gap: 0.625rem; */
+  min-height: 30vh;
+  max-height: 30vh;
+  font-size: 1rem;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+#head h2 {
+  font-size: 1.6rem;
+  color: rgba(85, 85, 85, 0.61);
+  text-align: center;
+  /* align-content: center; */
+  /* background-color: black; */
+  width: 100%;
+}
+
+#history-log {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+#history-log p {
+  background-color: rgba(85, 85, 85, 0.411);
+  padding: 0.4em 1em;
+  border-radius: 0.625rem;
+  color: white;
+  font-weight: 500;
+}
+#head {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 0.625rem;
+  align-items: center;
+}
+
+#head #clear-history {
+  color: white;
+  padding: 0.5rem 1rem;
+  background-color: red;
+  border-radius: 0.625rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
