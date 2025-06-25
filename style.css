@@ -37,7 +37,7 @@ nav {
   padding-right: 1rem;
 
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 
   background-color: bisque;
@@ -48,9 +48,14 @@ nav a {
   text-decoration: none;
   color: #000;
   font-size: 1.2rem;
-  /* border: 1px solid black; */
+  border: 0.2rem solid black;
   border-radius: 20px;
   padding: 1rem;
+  background-color: rgba(255, 0, 0, 0.438);
+  transition: all 0.2s;
+}
+nav a:hover {
+  background-color: rgba(255, 0, 0, 0.753);
 }
 
 section {
@@ -72,6 +77,9 @@ section h1 {
   background-color: #ddffb7;
   border-bottom: 0.2rem solid #000;
 }
+.dark-mode #home h1 {
+  color: #ddffb7;
+}
 #home #welcome {
   text-align: center;
   font-size: 1.4rem;
@@ -86,13 +94,22 @@ section h1 {
   background-color: #ffd18d;
   border-bottom: 0.2rem solid #000;
 }
+.dark-mode #about h1 {
+  color: #ffd18d;
+}
 #projects {
   background-color: rgb(255, 140, 140);
   border-bottom: 0.2rem solid #000;
 }
+.dark-mode #projects h1 {
+  color: rgb(255, 140, 140);
+}
 #contact {
   background-color: rgb(205, 253, 255);
   border-bottom: 0.2rem solid #000;
+}
+.dark-mode #contact h1 {
+  color: rgb(205, 253, 255);
 }
 
 /* Theme Toggle */
@@ -195,6 +212,8 @@ nav #theme-toggle {
   font-size: 4rem;
   position: relative;
   left: 3rem;
+  color: rgba(255, 0, 0, 0.699);
+  text-shadow: #000;
 }
 
 #about p {
@@ -309,9 +328,9 @@ nav #theme-toggle {
     flex-direction: column;
     position: absolute;
     top: 120%; /* pushes below nav */
-    left: 0;
+    left: -35%;
     /* right: 20rem; */
-    width: 100%; /* full screen width */
+    width: 135%; /* full screen width */
     background-color: bisque;
     /* padding: 1rem 0; */
     border-top: 0.3rem solid #000;
@@ -325,14 +344,22 @@ nav #theme-toggle {
 
   .nav-links a {
     text-align: center;
-    padding: 1rem 0;
+    padding-top: 1rem;
     font-size: 1.2rem;
     width: 100%;
     color: #000;
     text-decoration: none;
+    border: none;
     border-bottom: 0.2rem solid #000;
-    border-radius: 0;
+    /* border-top-left-radius: 20px;
+    border-top-right-radius: 20px; */
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: bisque;
     /* border-top: 1px solid #000; */
+  }
+  .nav-links #cont {
+    margin-bottom: 1rem;
   }
 
   /* dark nav */
