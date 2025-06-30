@@ -7,6 +7,9 @@ const publishBtn = document.querySelector("#savePostBtn");
 const titleInput = document.querySelector("#blogTitle");
 const blogContent = document.querySelector("#blogContent");
 
+//render posts on page
+const postContainer = document.querySelector("#postsContainer");
+
 //show / hide the modal
 newBlogBtn.addEventListener("click", () => {
   modalContainer.classList.add("show");
@@ -29,10 +32,66 @@ publishBtn.addEventListener("click", () => {
 
   console.log("title is:", `"${title}"`);
   if (title === "") {
-    console.log("should alert");
-    alert("alert citizens of earth we are all about to die!!!");
+    alert("You are supposed to write the title ig");
     return;
   }
+  //object of post
+  const post = {
+    title: title, // from input
+    content: content, // from contenteditable
+    createdAt: new Date().toLocaleString(),
+    updatedAt: null,
+  };
 
-  console.log("Post ready to be saved:", { title, content });
+  //list of current posts
+  let posts = JSON.parse(localStorage.getItem("blogPosts")) || [];
+
+  //adding post obj to the start of the list
+  posts.unshift(post);
+
+  //saving the updated list back to local storage
+  localStorage.setItem("blogPosts", JSON.stringify(posts));
+  console.log("Saved posts:", posts);
+
+  //clear modal and close
+  titleInput.value = "";
+  blogContent.innerHTML = "";
+  modalContainer.classList.remove("show");
+
+  //reload posts
+  renderPost(); // show the new post immediately
+
+  // console.log("Post ready to be saved:", { title, content });
 });
+
+//rendering posts on page
+
+function renderPost() {
+  let posts = JSON.parse(localStorage.getItem("blogPosts")) || [];
+  postContainer.innerHTML = "";
+
+  posts.forEach((post, index) => {
+    //creating article
+    const article = document.createElement("article");
+    const deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "🗑️ Delete";
+
+    //filling article
+    article.innerHTML = `
+    <h2>${post.title}</h2> 
+    <div>${post.content}</div>
+    <p><small>🕒 Posted on: ${post.createdAt}</small></p>`;
+
+    deleteBtn.addEventListener("click", () => {
+      posts.splice(index, 1); // index comes from the forEach
+      localStorage.setItem("blogPosts", JSON.stringify(posts));
+      renderPost();
+    });
+
+    //pushing article to postsContainer
+    postContainer.appendChild(article);
+    article.appendChild(deleteBtn);
+  });
+}
+
+renderPost(); // run once when the page loads

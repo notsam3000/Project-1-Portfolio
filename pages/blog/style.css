@@ -37,20 +37,24 @@ header a {
   background-color: bisque;
 }
 
-main {
+main #postsContainer {
   padding: 3rem;
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
 }
+#postsContainer h2 {
+  margin-bottom: 0.6rem;
+}
 
-main article {
+main div article {
   background-color: #fff;
   border: 0.2rem solid #000;
   border-radius: 20px;
   padding: 1rem;
 }
 
+/* Modal */
 .modal {
   display: none;
   position: fixed;
@@ -147,4 +151,14 @@ button {
   /* min-width: 1rem; */
   /* margin-top: 1rem; */
   background-color: rgba(255, 255, 0, 0.521);
+}
+
+/* delete btn */
+main article button {
+  padding: 0.8rem;
+  border-radius: 20px;
+  border: 0.2rem solid red;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-weight: 700;
 }
