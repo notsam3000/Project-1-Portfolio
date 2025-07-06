@@ -91,6 +91,12 @@ function renderPost() {
     //pushing article to postsContainer
     postContainer.appendChild(article);
     article.appendChild(deleteBtn);
+
+    //clickable posts
+    article.addEventListener("click", () => {
+      localStorage.setItem("selectedPostIndex", index);
+      window.location.href = "post_page.html";
+    });
   });
 }
 

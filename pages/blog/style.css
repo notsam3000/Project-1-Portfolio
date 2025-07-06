@@ -39,6 +39,8 @@ header a {
 
 main #postsContainer {
   padding: 3rem;
+  /* background-color: #fff; */
+  padding-top: 0rem;
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
@@ -122,6 +124,18 @@ main div article {
   margin-bottom: 1rem;
 }
 
+.modelbtncont {
+  /* background-color: #fff; */
+  display: flex;
+  justify-content: end;
+  padding: 1rem;
+}
+
+#openModalBtn {
+  padding: 1rem;
+  border-radius: 10px;
+}
+
 button {
   cursor: pointer;
 }
@@ -151,6 +165,11 @@ button {
   /* min-width: 1rem; */
   /* margin-top: 1rem; */
   background-color: rgba(255, 255, 0, 0.521);
+}
+
+/* article */
+article {
+  cursor: pointer;
 }
 
 /* delete btn */
