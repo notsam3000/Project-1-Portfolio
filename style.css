@@ -470,3 +470,9 @@ nav #theme-toggle {
     font-size: 1.2rem;
   }
 }
+
+@media (hover: none) and (pointer: coarse) {
+  .tooltip {
+    display: none !important;
+  }
+}
