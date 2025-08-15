@@ -64,7 +64,8 @@ nav a:hover {
 
 section {
   /* min-height: 80vh; */
-  scroll-margin-top: 10vh;
+  /* scroll-margin-top: 10vh; */
+  padding-top: 5vh;
   padding-bottom: 5vh;
   border-bottom: 0.2rem solid #000;
 }
@@ -74,33 +75,39 @@ section {
 section h1 {
   text-align: center;
   font-size: 2.4rem;
-  padding-top: 1.4rem;
+  /* padding-top: 1.4rem; */
   margin-bottom: 1.4rem;
+  /* font-size: 1.8rem; */
 }
 
-#home {
+/* #home {
   background-color: #ddffb7;
-  /* border-bottom: 0.2rem solid #000; */
+  border-bottom: 0.2rem solid #000;
 }
 .dark-mode #home h1 {
   color: #ddffb7;
-}
-#home #welcome {
+} */
+
+#about #welcome {
   text-align: center;
-  font-size: 1.4rem;
+  /* font-size: 1.6rem; */
   text-emphasis: dot;
   margin-bottom: 2.4rem;
 }
-#home p {
+/* #home p {
   text-align: center;
   font-size: 1.4rem;
-}
+} */
 #about {
   background-color: #ffd18d;
   /* border-bottom: 0.2rem solid #000; */
 }
 .dark-mode #about h1 {
   color: #ffd18d;
+}
+
+#my-intro {
+  font-weight: 600;
 }
 #projects {
   background-color: rgb(255, 140, 140);
@@ -194,16 +201,15 @@ nav #theme-toggle {
 /* Pic */
 
 .profile-pic {
-  width: 10rem;
-  height: 20rem;
+  width: 14rem;
   border-radius: 20px;
-  object-fit: cover;
+  object-fit: cov;
   display: block;
   margin: 1rem;
   box-shadow: 0 0 24px rgba(0, 0, 0, 0.822);
   pointer-events: none;
   user-select: none;
-  background-color: red;
+  /* background-color: red; */
 }
 
 #about .intro-container {
@@ -224,6 +230,10 @@ nav #theme-toggle {
   left: 3rem;
   color: rgba(255, 0, 0, 0.699);
   text-shadow: #000;
+}
+
+.italic {
+  font-style: italic;
 }
 
 #about p {
@@ -287,20 +297,29 @@ nav #theme-toggle {
   /* background-color: red;  */
   align-items: center;
 }
-.socials i {
+.socials a {
   font-size: 2rem;
   color: #000; /* adjust per your theme */
   transition: transform 0.2s ease;
   cursor: pointer;
+  font-style: normal;
+  /* text-decoration: underline;
+  text-decoration-style: dotted; */
+  border-bottom: 2px dotted currentColor;
+  padding-bottom: 3px;
 }
-.socials i:hover {
+.socials #blog {
+  font-size: 1.9rem;
+  text-decoration: none;
+}
+.socials a:hover {
   transform: scale(1.2);
   color: #f05a5a; /* playful hover effect */
 }
-.dark-mode .socials i {
+.dark-mode .socials a {
   color: #fff;
 }
-.dark-mode .socials i:hover {
+.dark-mode .socials a:hover {
   transform: scale(1.2);
   color: #f05a5a; /* playful hover effect */
 }
@@ -421,29 +440,35 @@ nav #theme-toggle {
 
   /* About section image & text stack */
   #about .intro-container {
-    flex-direction: column;
+    /* flex-direction: column; */
   }
 
   .profile-pic {
-    width: 8rem;
-    height: 12rem;
-    margin: 1rem auto;
+    width: 12rem;
+    height: 16rem;
+    margin: 1rem;
+    /* margin-top: ; */
   }
 
   #about i {
     left: 0; /* Resets the indent in mobile */
   }
 
+  #about p {
+    font-size: 1.6rem;
+  }
+
   /* Projects: stack cards vertically */
   .cards {
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
     margin-top: 2rem;
   }
 
   .cards .pro {
-    width: 80%;
+    min-width: 70vw;
+    max-width: 70vw;
     min-height: 10rem;
     font-size: 1.6rem;
   }
@@ -454,9 +479,9 @@ nav #theme-toggle {
   }
 
   /* Font size tweaks */
-  section h1 {
-    font-size: 1.8rem;
-  }
+  /* section h1 {
+ 
+  } */
 
   p {
     font-size: 1rem;
