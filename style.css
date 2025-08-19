@@ -454,7 +454,7 @@ nav #theme-toggle {
   /* About section image & text stack */
   #about .intro-container {
     /* flex-direction: column; */
-    background-color: #fff;
+    /* background-color: #fff; */
   }
 
   .profile-pic {
