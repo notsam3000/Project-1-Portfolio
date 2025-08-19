@@ -216,6 +216,7 @@ nav #theme-toggle {
   object-fit: cover;
   /* display: block; */
   /* margin: 1rem; */
+  margin: 1.5rem 0; /* top/bottom only */
   box-shadow: 0 0 24px rgba(0, 0, 0, 0.822);
   pointer-events: none;
   user-select: none;
