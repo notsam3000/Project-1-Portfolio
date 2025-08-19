@@ -7,6 +7,12 @@
   /* font-size: 1.2rem; */
 }
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   background-color: rgb(223, 86, 86);
 }
@@ -35,7 +41,7 @@ header h1 {
 }
 
 nav {
-  width: 50vw;
+  width: 50%;
   min-height: 100%;
   /* margin-right: 2em; */
   padding-right: 1rem;
@@ -68,6 +74,7 @@ section {
   padding-top: 5vh;
   padding-bottom: 5vh;
   border-bottom: 0.2rem solid #000;
+  overflow: hidden;
 }
 /* section #home {
   max-height: 20vh;
@@ -100,6 +107,9 @@ section h1 {
 } */
 #about {
   background-color: #ffd18d;
+  max-width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
   /* border-bottom: 0.2rem solid #000; */
 }
 .dark-mode #about h1 {
@@ -201,11 +211,11 @@ nav #theme-toggle {
 /* Pic */
 
 .profile-pic {
-  width: 14rem;
+  width: 12rem;
   border-radius: 20px;
-  object-fit: cov;
-  display: block;
-  margin: 1rem;
+  object-fit: cover;
+  /* display: block; */
+  /* margin: 1rem; */
   box-shadow: 0 0 24px rgba(0, 0, 0, 0.822);
   pointer-events: none;
   user-select: none;
@@ -217,12 +227,15 @@ nav #theme-toggle {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+  max-width: 100%;
   /* gap: 1rem; */
 }
-#about #intro {
+/* #about #intro {
   text-align: center;
   margin: 0;
-}
+} */
 
 #about i {
   font-size: 4rem;
@@ -369,9 +382,9 @@ nav #theme-toggle {
     flex-direction: column;
     position: absolute;
     top: 120%; /* pushes below nav */
-    left: -35%;
+    left: 0;
     /* right: 20rem; */
-    width: 135%; /* full screen width */
+    width: 100%; /* full screen width */
     background-color: bisque;
     /* padding: 1rem 0; */
     border-top: 0.3rem solid #000;
@@ -441,13 +454,13 @@ nav #theme-toggle {
   /* About section image & text stack */
   #about .intro-container {
     /* flex-direction: column; */
+    background-color: #fff;
   }
 
   .profile-pic {
-    width: 12rem;
-    height: 16rem;
-    margin: 1rem;
-    /* margin-top: ; */
+    width: 11rem;
+    /* margin: 1rem; */
+    /* margin-top: ; 
   }
 
   #about i {
@@ -456,6 +469,13 @@ nav #theme-toggle {
 
   #about p {
     font-size: 1.6rem;
+    /* text-align: left; */
+    margin-top: 2rem;
+    /* background-color: red; */
+  }
+
+  #about i {
+    left: 0.5rem;
   }
 
   /* Projects: stack cards vertically */
@@ -467,8 +487,8 @@ nav #theme-toggle {
   }
 
   .cards .pro {
-    min-width: 70vw;
-    max-width: 70vw;
+    width: 90%;
+    max-width: 20rem; /* keeps them tidy */
     min-height: 10rem;
     font-size: 1.6rem;
   }
