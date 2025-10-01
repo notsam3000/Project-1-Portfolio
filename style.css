@@ -112,6 +112,11 @@ section h1 {
   overflow-x: hidden;
   /* border-bottom: 0.2rem solid #000; */
 }
+
+#flutter {
+  color: #167bff;
+}
+
 .dark-mode #about h1 {
   color: #ffd18d;
 }
