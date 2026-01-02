@@ -81,7 +81,7 @@ section {
 } */
 section h1 {
   text-align: center;
-  font-size: 2.4rem;
+  font-size: 1.6rem;
   /* padding-top: 1.4rem; */
   margin-bottom: 1.4rem;
   /* font-size: 1.8rem; */
@@ -122,7 +122,10 @@ section h1 {
 }
 
 #my-intro {
-  font-weight: 600;
+  font-weight: 500;
+  margin: 1rem 1rem 1rem 1rem;
+  text-align: center;
+  /* background-color: red; */
 }
 #projects {
   background-color: rgb(255, 140, 140);
