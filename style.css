@@ -481,6 +481,7 @@ nav #theme-toggle {
   .profile-pic {
     width: min(18rem, 78vw);
     margin: 1rem 0;
+    box-shadow: 0 0.4rem 0.9rem rgba(0, 0, 0, 0.45);
   }
 
   #about i {
