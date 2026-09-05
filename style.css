@@ -479,9 +479,8 @@ nav #theme-toggle {
   }
 
   .profile-pic {
-    width: min(11rem, 42vw);
-    /* margin: 1rem; */
-    /* margin-top: ; 
+    width: min(18rem, 78vw);
+    margin: 1rem 0;
   }
 
   #about i {
