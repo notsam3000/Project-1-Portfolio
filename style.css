@@ -219,13 +219,13 @@ nav #theme-toggle {
 /* Pic */
 
 .profile-pic {
-  width: 20rem;
+  width: clamp(10rem, 32vw, 16rem);
   border-radius: 20px;
   object-fit: cover;
   /* display: block; */
   /* margin: 1rem; */
   margin: 1.5rem 0; /* top/bottom only */
-  margin-left: -10rem; /* left indent */
+  /* margin-left: -10rem; left indent */
   box-shadow: 0 0 24px rgba(0, 0, 0, 0.822);
   pointer-events: none;
   user-select: none;
@@ -240,17 +240,18 @@ nav #theme-toggle {
   flex-wrap: wrap;
   overflow: hidden;
   max-width: 100%;
-  /* gap: 1rem; */
+  gap: 1.5rem;
+  margin-inline: auto;
 }
-/* #about #intro {
+#about #intro {
   text-align: center;
   margin: 0;
-} */
+}
 
 #about i {
   font-size: 4rem;
   position: relative;
-  left: 3rem;
+  left: 0;
   color: rgba(255, 0, 0, 0.699);
   text-shadow: #000;
 }
@@ -474,12 +475,11 @@ nav #theme-toggle {
 
   /* About section image & text stack */
   #about .intro-container {
-    /* flex-direction: column; */
-    /* background-color: #fff; */
+    flex-direction: column;
   }
 
   .profile-pic {
-    width: 11rem;
+    width: min(11rem, 42vw);
     /* margin: 1rem; */
     /* margin-top: ; 
   }
